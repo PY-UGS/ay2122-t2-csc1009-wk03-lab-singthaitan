@@ -49,20 +49,10 @@ public class Loan {
     //Returns the monthly payment for this loan
     public double getMonthlyPayment()
     {
-        // Convert interest rate into a decimal
-        // eg. 6.5% = 0.065
-
         double annualRate = getAnnualInterestRate()/100;
-
-        // Monthly interest rate
-        // is the yearly rate divided by 12
 
         double monthlyInterestRate = annualRate / 12.0;
 
-        // The length of the term in months
-        // is the number of years times 12
-
-        //int termInMonths = this.numberOfYears * 12;
         double loanAmount = getLoanAmount();
         int years = getNumberOfYears();
         // The Math.pow() method is used calculate values raised to a power
